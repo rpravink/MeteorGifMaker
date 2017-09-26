@@ -16,7 +16,7 @@ Uses collectionFS package to store the files
 
 
 #### Meteor.animate()
-Accepts milliseconds as input (default 1000) and passed to Gifshot to create Gif.
+Accepts milliseconds as input (default 2000) and passed to Gifshot to create Gif.
 Created gif will be attached to hyperlink for downlaod
 
 #### Meteor.reset()
