@@ -1,0 +1,52 @@
+<body>
+    {{> loginButtons}}
+     {{#if currentUser}}
+<div class="container" style="text-align: center;">
+    <header>
+        <h1>Gif Maker Test</h1>
+    </header> <hr>
+    <div>
+       {{> testDataTransfer}}
+        <div  style="margin-top: 2%;">
+            1.&nbsp;{{> gifmaker }}
+        </div><br/>
+        <div>
+            2.&nbsp;{{> gifmaker }}
+        </div><br/>
+        <div>
+            3.&nbsp;{{> gifmaker }}
+        </div><br/>
+        <div>
+            4.&nbsp;{{> gifmaker }}
+        </div><br/>
+        <div>
+            5.&nbsp;{{> gifmaker }}
+        </div>
+        <br>
+        <div>
+            <input type="number" placeholder="milliseconds" id="duration" value="2000"/>
+        </div>
+        <br>
+        <div>
+            <button id="animate">Create Gif</button>
+            <button id="reset">Reset</button>
+        </div><br>  
+        Click the image to download <br><br>
+        <a id="display"  download>
+            </a>
+    </div>
+</div>
+{{/if}}
+</body>
+<template name="gifmaker">
+    <input type=file class="fileupload"/>
+</template>
+
+<template name="testDataTransfer">
+<div id="drop-zone" style=" background-color: lightgrey; width: 20%;   border: 2px solid black;    padding: 1%;    margin-left: 40%;">
+            <div id="dropDiv" ondrop="" ondragover="">
+              <span>Drag and <em>Drop</em> here</span>
+            </div>
+            <br>
+</div>
+</template>
